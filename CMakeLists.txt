@@ -31,6 +31,12 @@ FetchContent_MakeAvailable(SDL3)
 
 add_executable(MyEngine
   src/main.cpp
+  src/platform/Window.cpp
+)
+
+target_include_directories(MyEngine
+  PRIVATE
+    "${CMAKE_CURRENT_SOURCE_DIR}/include"
 )
 
 target_link_libraries(MyEngine
